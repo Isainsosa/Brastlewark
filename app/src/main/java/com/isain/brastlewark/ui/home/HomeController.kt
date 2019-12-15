@@ -16,6 +16,7 @@ class HomeController:BaseFragmentController<HomeAction, HomeState, HomeViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        arcoController.dispatch(HomeAction.RetrieveCensusData)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

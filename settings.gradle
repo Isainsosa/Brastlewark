@@ -1,5 +1,7 @@
 include ':app'
 include ':libraries_arco'
 include ':libraries_design'
+include ':libraries_network'
 project(':libraries_arco').projectDir = new File('libraries/arco')
 project(':libraries_design').projectDir = new File('libraries/design')
+project(':libraries_network').projectDir = new File('libraries/network')

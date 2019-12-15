@@ -5,7 +5,9 @@ import com.isainsosa.arco.ArcoState
 
 sealed class HomeState: ArcoState {
     object Initial: HomeState()
-    object Nochange: HomeState()
+    object RetrievingCensusData: HomeState()
+    object RetrieveCensusDataSuccess: HomeState()
+    object RetrieveCensusDataError: HomeState()
 }
 
 sealed class HomeAction: ArcoAction {
