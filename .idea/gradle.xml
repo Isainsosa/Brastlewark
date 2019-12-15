@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libraries/arco" />
             <option value="$PROJECT_DIR$/libraries/design" />
+            <option value="$PROJECT_DIR$/libraries/network" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
