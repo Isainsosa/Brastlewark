@@ -1,2 +1,5 @@
 include ':app'
-rootProject.name='Brastlewark'
+include ':libraries_arco'
+include ':libraries_design'
+project(':libraries_arco').projectDir = new File('libraries/arco')
+project(':libraries_design').projectDir = new File('libraries/design')

@@ -1,0 +1,9 @@
+ext {
+    app_id = "com.isain.brastlewark"
+
+    app_version_code = 1
+    app_version_name = "1.0.0"
+
+    target_sdk = 28
+    min_sdk = 19
+}
