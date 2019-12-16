@@ -27,6 +27,7 @@ dependencies {
 
     implementation project(":libraries_arco")
     implementation project(":libraries_network")
+    implementation project(":libraries_design")
 
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$support_lib_version"

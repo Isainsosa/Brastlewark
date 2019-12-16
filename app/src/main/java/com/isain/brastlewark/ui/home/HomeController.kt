@@ -2,9 +2,14 @@ package com.isain.brastlewark.ui.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
+import com.isain.brastlewark.MainActivity
 import com.isain.brastlewark.R
+import com.isain.brastlewark.ui.detail.DetailController
 import com.isainsosa.arco.controller.BaseFragmentController
-import com.isainsosa.arco.renderer.ViewModelRenderer
+import com.isainsosa.arco.extensions.FragmentAnimation
+import com.isainsosa.arco.extensions.replaceFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
 class HomeController:BaseFragmentController<HomeAction, HomeState, HomeViewModel>() {
 
@@ -25,7 +30,15 @@ class HomeController:BaseFragmentController<HomeAction, HomeState, HomeViewModel
     }
 
     override fun onAction(action: HomeAction) {
-        super.onAction(action)
+        when(action) {
+            is HomeAction.InhabitantClicked -> {
+                showDetail(DetailController())
+            }
+        }
+    }
 
+    private fun showDetail(detailController: Fragment) {
+        val mainActivity = activity as MainActivity
+        mainActivity.container.let { mainActivity.supportFragmentManager.replaceFragment(it.id, detailController, true, FragmentAnimation.HORIZONTAL_ANIM) }
     }
 }

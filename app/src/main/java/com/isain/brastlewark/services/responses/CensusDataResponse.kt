@@ -2,7 +2,7 @@ package com.isain.brastlewark.services.responses
 
 import com.google.gson.annotations.SerializedName
 
-data class CensusDataResponse(@SerializedName("Brastlewark") val town: List<Inhabitant>)
+data class CensusDataResponse(@SerializedName("Brastlewark") val inhabitants: List<Inhabitant>)
 
 data class Inhabitant(val id: Long,
                       val name: String,
