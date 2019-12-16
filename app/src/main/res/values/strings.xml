@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Brastlewark</string>
+    <string name="search">Buscar</string>
+
+    <string name="inhabitant_age">Edad: %1$s años.</string>
+    <string name="inhabitant_weight">Peso: %1$s kgs.</string>
+    <string name="inhabitant_height">Estatura: %1$s cms.</string>
+    
+    <string name="filter_header">Ordenar por</string>
+    <string name="age">Edad</string>
+    <string name="weight">Peso</string>
+    <string name="height">Estatura</string>
+    <string name="none">Ninguno</string>
+
 </resources>
