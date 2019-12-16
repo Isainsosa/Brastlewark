@@ -8,6 +8,12 @@ import kotlinx.android.synthetic.main.view_detail.view.*
 
 class DetailRenderer(view: View, detailViewModel: DetailViewModel): ViewModelRenderer<DetailAction, DetailState, DetailViewModel>(view, detailViewModel) {
 
+    init {
+        view.backBtn.setOnClickListener {
+            controller.dispatch(DetailAction.GoBack)
+        }
+    }
+
     override fun render(state: DetailState) {
         when(state) {
             is DetailState.ShowDetail -> {

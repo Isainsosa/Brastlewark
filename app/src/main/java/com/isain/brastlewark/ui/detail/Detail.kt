@@ -10,4 +10,5 @@ sealed class DetailState: ArcoState {
 
 sealed class DetailAction: ArcoAction {
     class GetDetail(val inhabitantId: Long): DetailAction()
+    object GoBack: DetailAction()
 }
