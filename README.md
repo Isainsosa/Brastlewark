@@ -1,7 +1,7 @@
 # Brastlewark
 Gnome directory to facility the Brastlewark inhabitants to find the census data
 
-This project is build based in a MVVM architecture using a BaseFragmentController, a ViewModelRenderer and a BaseViewModel as principal components, in this way all components are be able to react to the actions performed in each component.
+This project is built based in a MVVM architecture using a BaseFragmentController, a ViewModelRenderer and a BaseViewModel as principal components, in this way all components are be able to react to the actions performed in each component.
 
 To load images from Internet I used Glide, its a library that helps to load the images and cache them to future requests
 https://bumptech.github.io/glide/
