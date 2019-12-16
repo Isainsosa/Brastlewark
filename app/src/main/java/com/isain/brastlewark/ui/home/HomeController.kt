@@ -32,7 +32,7 @@ class HomeController:BaseFragmentController<HomeAction, HomeState, HomeViewModel
     override fun onAction(action: HomeAction) {
         when(action) {
             is HomeAction.InhabitantClicked -> {
-                showDetail(DetailController())
+                showDetail(DetailController.instance(action.inhabitant.id))
             }
         }
     }

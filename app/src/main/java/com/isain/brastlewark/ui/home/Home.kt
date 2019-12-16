@@ -1,6 +1,6 @@
 package com.isain.brastlewark.ui.home
 
-import com.isain.brastlewark.services.responses.Inhabitant
+import com.isain.brastlewark.database.entities.Inhabitant
 import com.isainsosa.arco.ArcoAction
 import com.isainsosa.arco.ArcoState
 

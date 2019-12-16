@@ -6,7 +6,7 @@ import android.widget.SearchView
 import androidx.appcompat.widget.PopupMenu
 import androidx.recyclerview.widget.GridLayoutManager
 import com.isain.brastlewark.R
-import com.isain.brastlewark.services.responses.Inhabitant
+import com.isain.brastlewark.database.entities.Inhabitant
 import com.isainsosa.arco.renderer.ViewModelRenderer
 import kotlinx.android.synthetic.main.view_home.view.*
 

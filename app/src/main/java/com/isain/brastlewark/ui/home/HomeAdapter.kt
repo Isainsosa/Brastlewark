@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.isain.brastlewark.R
-import com.isain.brastlewark.services.responses.Inhabitant
+import com.isain.brastlewark.database.entities.Inhabitant
+import com.isain.brastlewark.managers.ImageLoaderManager
 import kotlinx.android.synthetic.main.card_inhabitant_profile.view.*
 
 interface HomeAdapterListener {
@@ -31,7 +32,7 @@ class HomeAdapter(val listener: HomeAdapterListener): RecyclerView.Adapter<HomeA
 
         if (searchQuery.isNotEmpty()) {
             inhabitants.map { inhabitant ->
-                if (inhabitant.name.contains(searchQuery) || inhabitant.professions.filter { it.contains(searchQuery) }.isNotEmpty()) {
+                if (inhabitant.name.contains(searchQuery)) {
                     inhabitantsFiltered.add(inhabitant)
                 }
             }
@@ -83,9 +84,7 @@ class HomeAdapter(val listener: HomeAdapterListener): RecyclerView.Adapter<HomeA
                 listener.onItemClicked(inhabitant)
             }
             itemView.name.text = inhabitant.name
-            Glide.with(itemView.context)
-                .load(inhabitant.thumbnail)
-                .into(itemView.thumbnail)
+            ImageLoaderManager.loadImage(inhabitant.thumbnail, itemView.thumbnail)
         }
     }
 
